@@ -21,15 +21,16 @@ struct Channel
 {
    int amountOfShows;
    struct Show *show;
-};
+}
 
-void getShow(Show &show);
+void
+getShow(Show &show);
 void printShow(const Show &show);
 void getShowRandom(Show &show);
 
-void getChannel(Channel *channel);
+void getChannel(Channel &channel);
 void printChannel(const Channel &channel);
-void getChannelRandom(Channel *channel);
+void getChannelRandom(Channel &channel);
 
 int main(int argc, char const *argv[])
 {
@@ -38,18 +39,29 @@ int main(int argc, char const *argv[])
    int stopOrContinue = 0;
    cout << "Do you want to randomise?(1 for Yes, 0 for No)" << endl;
    cin >> randomise;
-   Channel *channel1 = new Channel;
-   if (randomise == 1)
+   cout << "How many shows do you want to add?" << endl;
+   cin >> showAmount;
+   Show *show = new Show[showAmount];
+   for (int i = 0; i < showAmount; i++)
    {
-      getChannelRandom(channel1);
+      if (randomise == 1)
+      {
+         getShowRandom(show[i]);
+      }
+      else
+      {
+         getShow(show[i]);
+      }
+      printShow(show[i]);
    }
-   else
+   for (int n = 0; n < showAmount; n++)
    {
-      getChannel(channel1);
-      cout << "How many shows do you want to add?" << endl;
-      cin >> channel1->amountOfShows;
+      cout << "Show " << n + 1 << ": " << endl;
+      cout << show[n].name << endl;
+      cout << show[n].time.hour << ":" << show[n].time.minute << endl
+           << endl;
    }
-   printChannel(*channel1);
+
    return 0;
 }
 
@@ -75,14 +87,14 @@ void getShowRandom(Show &show)
    show.name = "Random Show " + to_string(rand() % 100);
 }
 
-void getChannel(Channel *channel)
+void getChannel(Channel &channel)
 {
    cout << "Enter the amount of shows: ";
-   cin >> channel->amountOfShows;
-   channel->show = new Show[channel->amountOfShows];
-   for (int i = 0; i < channel->amountOfShows; i++)
+   cin >> channel.amountOfShows;
+   channel.show = new Show[channel.amountOfShows];
+   for (int i = 0; i < channel.amountOfShows; i++)
    {
-      getShow(channel->show[i]);
+      getShow(channel.show[i]);
    }
 }
 
@@ -97,12 +109,12 @@ void printChannel(const Channel &channel)
    }
 }
 
-void getChannelRandom(Channel *channel)
+void getChannelRandom(Channel &channel)
 {
-   channel->amountOfShows = rand() % 10;
-   channel->show = new Show[channel->amountOfShows];
-   for (int i = 0; i < channel->amountOfShows; i++)
+   channel.amountOfShows = rand() % 10;
+   channel.show = new Show[channel.amountOfShows];
+   for (int i = 0; i < channel.amountOfShows; i++)
    {
-      getShowRandom(channel->show[i]);
+      getShowRandom(channel.show[i]);
    }
 }
