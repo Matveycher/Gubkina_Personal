@@ -17,9 +17,9 @@ struct Show
    } time;
 };
 
-void getShow(Show &show);
+void setShow(Show &show);
 void printShow(const Show &show);
-void getShowRandom(Show &show);
+void setShowRandom(Show &show);
 Show *AddStruct(Show *&show, int &size);
 
 int main(int argc, char const *argv[])
@@ -36,11 +36,11 @@ int main(int argc, char const *argv[])
    {
       if (randomise == 1)
       {
-         getShowRandom(show[i]);
+         setShowRandom(show[i]);
       }
       else
       {
-         getShow(show[i]);
+         setShow(show[i]);
       }
       printShow(show[i]);
    }
@@ -55,7 +55,7 @@ int main(int argc, char const *argv[])
    return 0;
 }
 
-void getShow(Show &show)
+void setShow(Show &show)
 {
    cout << "Enter the name of the show: ";
    getline(cin, show.name);
@@ -70,7 +70,7 @@ void printShow(const Show &show)
    cout << "The show " << show.name << " is at " << show.time.hour << ":" << show.time.minute << endl;
 }
 
-void getShowRandom(Show &show)
+void setShowRandom(Show &show)
 {
    show.time.hour = rand() % 24;
    show.time.minute = rand() % 60;

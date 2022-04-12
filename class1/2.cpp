@@ -4,117 +4,122 @@
 #include <exception>
 #include <cmath>
 #include <ctime>
+#include "2.h"
 
 using namespace std;
 
-struct Show
+class Show
 {
+private:
    string name;
    struct time
    {
       int hour;
       int minute;
    } time;
+
+public:
+   string getName()
+   {
+      return name;
+   }
+   void setName(string name)
+   {
+      this->name = name;
+   }
+   int getHour()
+   {
+      return time.hour;
+   }
+   void setHour(int hour)
+   {
+      this->time.hour = hour;
+   }
+   int getMinute()
+   {
+      return time.minute;
+   }
+   void setMinute(int minute)
+   {
+      this->time.minute = minute;
+   }
+
+   void setShow()
+   {
+      cout << "Enter the name of the show: ";
+      cin >> name;
+      cout << "Enter the hour of the show: ";
+      cin >> time.hour;
+      cout << "Enter the minute of the show: ";
+      cin >> time.minute;
+   }
+   void getShowRandom()
+   {
+      time.hour = rand() % 24;
+      time.minute = rand() % 60;
+      name = "Random Show " + to_string(rand() % 100);
+   }
+   void printShow()
+   {
+      cout << "Show: " << name << endl;
+      cout << "Time: " << time.hour << ":" << time.minute << endl;
+   }
+   Show()
+   {
+      name = "";
+      time.hour = 0;
+      time.minute = 0;
+   }
+   Show(string name, int hour, int minute)
+   {
+      this->name = name;
+      this->time.hour = hour;
+      this->time.minute = minute;
+   }
 };
 
-struct Channel
+void setShowRandom(Show _show);
+void printShow(Show _show);
+void setShow(Show _show);
+
+int main()
 {
-   int amountOfShows;
-   struct Show *show;
-}
-
-void
-getShow(Show &show);
-void printShow(const Show &show);
-void getShowRandom(Show &show);
-
-void getChannel(Channel &channel);
-void printChannel(const Channel &channel);
-void getChannelRandom(Channel &channel);
-
-int main(int argc, char const *argv[])
-{
-   int randomise = 0;
-   int showAmount = 0;
-   int stopOrContinue = 0;
-   cout << "Do you want to randomise?(1 for Yes, 0 for No)" << endl;
-   cin >> randomise;
-   cout << "How many shows do you want to add?" << endl;
-   cin >> showAmount;
-   Show *show = new Show[showAmount];
-   for (int i = 0; i < showAmount; i++)
-   {
-      if (randomise == 1)
-      {
-         getShowRandom(show[i]);
-      }
-      else
-      {
-         getShow(show[i]);
-      }
-      printShow(show[i]);
-   }
-   for (int n = 0; n < showAmount; n++)
-   {
-      cout << "Show " << n + 1 << ": " << endl;
-      cout << show[n].name << endl;
-      cout << show[n].time.hour << ":" << show[n].time.minute << endl
-           << endl;
-   }
+   /*cout << "Example of random show:\n";
+   Show showRandom;
+   setShowRandom(showRandom);
+   // showRandom.setHour(rand() % 24);
+   printShow(showRandom);
+   */
+   cout << "Example of non-random show:\n";
+   Show show;
+   setShow(show);
+   printShow(show);
 
    return 0;
 }
-
-void getShow(Show &show)
+void setShow(Show _show)
 {
-   cout << "Enter the name of the show: ";
-   getline(cin, show.name);
-   cout << "Enter the hour of the show: ";
-   cin >> show.time.hour;
-   cout << "Enter the minute of the show: ";
-   cin >> show.time.minute;
+   int minute = 0;
+   int hour = 0;
+   string name = "";
+   cout << "Enter the name of the show: \n";
+   cin >> name;
+   _show.setName("name");
+   cout << "Enter the hour of the show: \n";
+   cin >> hour;
+   _show.setHour(hour);
+   cout << "Enter the minute of the show: \n";
+   cin >> minute;
+   _show.setMinute(minute);
 }
-
-void printShow(const Show &show)
+void setShowRandom(Show _show)
 {
-   cout << "The show " << show.name << " is at " << show.time.hour << ":" << show.time.minute << endl;
+   _show.setHour(rand() % 24);
+   _show.setMinute(rand() % 60);
+   _show.setName("Random Show " + to_string(rand() % 100));
 }
-
-void getShowRandom(Show &show)
+void printShow(Show _show)
 {
-   show.time.hour = rand() % 24;
-   show.time.minute = rand() % 60;
-   show.name = "Random Show " + to_string(rand() % 100);
-}
-
-void getChannel(Channel &channel)
-{
-   cout << "Enter the amount of shows: ";
-   cin >> channel.amountOfShows;
-   channel.show = new Show[channel.amountOfShows];
-   for (int i = 0; i < channel.amountOfShows; i++)
-   {
-      getShow(channel.show[i]);
-   }
-}
-
-void printChannel(const Channel &channel)
-{
-   for (int i = 0; i < channel.amountOfShows; i++)
-   {
-      cout << "Show " << i + 1 << ": " << endl;
-      cout << channel.show[i].name << endl;
-      cout << channel.show[i].time.hour << ":" << channel.show[i].time.minute << endl
-           << endl;
-   }
-}
-
-void getChannelRandom(Channel &channel)
-{
-   channel.amountOfShows = rand() % 10;
-   channel.show = new Show[channel.amountOfShows];
-   for (int i = 0; i < channel.amountOfShows; i++)
-   {
-      getShowRandom(channel.show[i]);
-   }
+   cout << "Show: " << _show.getName() << endl;
+   cout << "Time: " << _show.getHour() << ":" << _show.getMinute() << endl;
 }
