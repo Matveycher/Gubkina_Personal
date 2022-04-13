@@ -80,7 +80,7 @@ public:
 
 void setShowRandom(Show _show);
 void printShow(Show _show);
-void setShow(Show _show);
+void setShow(Show &_show);
 
 int main()
 {
@@ -97,7 +97,7 @@ int main()
 
    return 0;
 }
-void setShow(Show _show)
+void setShow(Show &_show)
 {
    int minute = 0;
    int hour = 0;
