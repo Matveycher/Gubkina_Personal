@@ -8,7 +8,6 @@
 
 using namespace std;
 
-
 int main()
 {
    ShowList showList;
@@ -22,5 +21,6 @@ int main()
    showList.printShows();
    showList.getShowsRandom();
    showList.printShows();
+
    return 0;
 }

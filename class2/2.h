@@ -94,6 +94,8 @@ public:
    ~ShowList()
    {
       delete[] shows;
+
+      cout << "xxxxx";
    }
    void addShow(Show _show)
    {

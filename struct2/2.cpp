@@ -50,6 +50,12 @@ int main(int argc, char const *argv[])
       cin >> channel1->amountOfShows;
    }
    printChannel(*channel1);
+
+   cout << channel1->show->name;
+   free(channel1->show);
+   cout << channel1->show->name;
+   free(channel1);
+   // cout << channel1->show->name;
    return 0;
 }
 

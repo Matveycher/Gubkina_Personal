@@ -58,7 +58,8 @@ int main(int argc, char const *argv[])
 void setShow(Show &show)
 {
    cout << "Enter the name of the show: ";
-   getline(cin, show.name);
+   cin >> show.name;
+   cout << "\n";
    cout << "Enter the hour of the show: ";
    cin >> show.time.hour;
    cout << "Enter the minute of the show: ";

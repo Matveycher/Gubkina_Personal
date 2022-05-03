@@ -75,6 +75,7 @@ public:
       this->time.hour = hour;
       this->time.minute = minute;
    }
+   
 };
 
 void setShowRandom(Show &_show);
