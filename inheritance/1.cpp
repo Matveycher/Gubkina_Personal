@@ -1,4 +1,5 @@
-#include "2.h"
+//#include "int.h"
+#include "float.h"
 
 /*
 ЧЕРНЫХ МАТВЕЙ
@@ -9,7 +10,7 @@
 
 int main()
 {
-   cout << "Enter the type of the shape: ";
+   cout << "Enter the type of the shape(c for Cube, n for Cone, t for Tetrahedront): ";
    char answer;
    cin >> answer;
    switch (answer)
