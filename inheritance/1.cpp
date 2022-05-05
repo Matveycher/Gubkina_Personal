@@ -1,4 +1,5 @@
 //#include "int.h"
+//#include "float6.h"
 #include "float.h"
 
 /*
@@ -18,23 +19,22 @@ int main()
    case 'c':
    {
       Cube cube;
-      cube.getVolume();
-      cube.getArea();
+      cout << cube;
       break;
    }
    case 't':
    {
       Tetrahedron tetrahedron;
-      tetrahedron.getVolume();
-      tetrahedron.getArea();
+      cout << tetrahedron;
       break;
    }
    case 'n':
    {
       Cone cone;
-      cone.getVolume();
-      cone.getArea();
+      cout << cone;
       break;
    }
+   default:
+      cout << "Incorrect input. Try again\n";
    }
 }
