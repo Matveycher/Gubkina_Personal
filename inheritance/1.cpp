@@ -1,5 +1,3 @@
-//#include "int.h"
-//#include "float6.h"
 #include "float.h"
 
 /*

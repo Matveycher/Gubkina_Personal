@@ -26,6 +26,9 @@ protected:
 
 class Cube : public Shape
 {
+   friend std::ostream &operator<<(std::ostream &out, Cube &shape);
+   friend std::istream &operator>>(std::istream &in, Cube &shape);
+
 public:
    Cube()
    {
@@ -43,8 +46,6 @@ public:
       calcS();
       calcV();
    }
-   friend std::ostream &operator<<(std::ostream &out, Cube &shape);
-   friend std::istream &operator>>(std::istream &in, Cube &shape);
 
 private:
    void calcS()
@@ -63,6 +64,9 @@ private:
 
 class Cone : public Shape
 {
+   friend std::ostream &operator<<(std::ostream &out, Cone &shape);
+   friend std::istream &operator>>(std::istream &in, Cone &shape);
+
 public:
    Cone()
    {
@@ -102,6 +106,9 @@ private:
 
 class Tetrahedron : public Shape
 {
+   friend std::ostream &operator<<(std::ostream &out, Tetrahedron &shape);
+   friend std::istream &operator>>(std::istream &in, Tetrahedron &shape);
+
 public:
    Tetrahedron()
    {
@@ -120,8 +127,6 @@ public:
       calcV();
       calcS();
    }
-   friend std::ostream &operator<<(std::ostream &out, Tetrahedron &shape);
-   friend std::istream &operator>>(std::istream &in, Tetrahedron &shape);
 
 private:
    void calcV()
@@ -180,3 +185,4 @@ std::istream &operator>>(std::istream &in, Tetrahedron &shape)
    in >> shape.a;
    return in;
 }
+
