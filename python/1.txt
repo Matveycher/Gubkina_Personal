@@ -1,0 +1,347 @@
+hi software engineers a very important part of being a good software engineer is learning to work
+with others both in a team or within a company but also working with others as far as
+society goes and being a responsible member of the greater community so today we're going to talk about the software
+engineering code of ethics have you ever thought about just how much power
+software has in people's lives it controls our money it controls transportation
+it controls traffic lights for heaven's sakes um if as an engineer
+you were ever derelict in your duties what could potentially happen now you
+might think to yourself why you know i plan on working on you know grandma's recipe maker 9000. i'm not planning on
+working on critical infrastructure software but everything plays a role
+and everything has an effect on people's lives in some way so what responsibility do you have to
+society at large for the quality of your products um
+have you seen unethical behavior from software developers before i mean there are examples out there certainly
+and we can we can get into some of those but but think about that for a moment have you ever really thought about wow
+you really didn't test this or wow did you really think about how this
+software might be used or how could you release a piece of software with
+known critical failures in it when something could potentially happen
+so we need to have some guiding principles as software engineers to make sure that we are trying to be as
+conscientious as possible and to be responsible for the products that we create now i do want to show you a clip here
+now if you've never seen this this is from office space and uh i'm just gonna let the clip speak for itself
+all right so when the subroutine compounds the interest right it uses all these extra decimal places that just get
+rounded off so we simplified the whole thing and we just we round them all down and just
+drop the remainder into an account that we opened so you're stealing uh no
+no you don't understand it's uh it's very complicated it's uh it's it's aggregate so i'm
+talking about fractions of a penny here and uh over time they add up to a lot
+oh okay you're gonna make a lot of money right yeah right it's not yours uh well
+it becomes ours how is that not stealing
+i don't think uh i don't think that i'm explaining this very well um the 7-eleven right
+you'd take a penny from the tray from the crippled children no that's the jar i'm talking about the
+tray that the you know the pennies for for everybody oh for everybody yeah well those are
+whole pennies all right all right i'm just talking about fractions of a penny here okay but we do it from a much bigger
+tray and we do it a couple of million times so what's wrong with that all right
+so what's wrong with that now the the software engineering character whose name is escaping me right now is
+is explaining to his girlfriend jennifer aniston about this algorithm that they're working on it and the
+if you've never seen office space i i suggest you go do so um at some point um there's some quality
+memes that tps reports comes from this or you know i need you to come in over the weekend so there's some
+there's some quality computer science memes from this movie so it's worth going to see or finding um legally um
+so he's working on some banking software effectively that is you know it's doing calculations
+but as we know math is you know math is fun and doesn't always end up in the you know hundredth
+position in the in the decimal place and so they're like well instead of just rounding we're just
+going to take that little slice off and we're actually going to put it into account because it's real money and either just kind of mathematically
+creating money out of nowhere um spoiler alert there's a bug in their software and instead of
+uh they moved the decimal place over by one and so they end up basically stealing millions of dollars
+in the course of you know a couple hours um
+he makes the argument that you know i'm just we're just taken from the penny jar it's just it doesn't matter who who really cares
+and she keeps repeating but it's not yours but it's stealing it
+it does still hit at what people need to think about when you are writing
+software and what powers that you do have here's another one from from um
+from dilbert we can discuss um the usage of dilbert in general but i i
+think the point here is interesting which is wally i discovered a deadly safety flaw in our product who should i inform no
+one the stock would plunge and we'd have massive layoffs your career would be ruined but my negligence could cause the deaths of a
+dozen customers the first dozen is always the hardest so unlike the the office space video
+where the ethical violation here is
+very legally stealing thing well they're breaking the law in stealing things um and you know
+hyperbole aside in this particular comic imagine that you did find a security
+flaw in your product if you went public with it
+what effect would that have would that destroy the company and then anyone who's been using the
+software could be um uh potentially exposed to even more risk because now
+the flaw is out there and people know about it do you approach your manager and talk to
+your manager about this flaw and see about getting it repaired as quickly as possible within the chain of command
+do you go directly to the developer if you happen to know who it was if there's someone on your team or someone you know
+in the general vicinity and you can say hey look i found this flaw and that person's like holy smokes and then they go into a patch themselves
+that hopefully gets rolled out i mean what's the right thing to do here um
+where do you start um conflict is not an easy thing for many people to deal with you might not
+want to be you might not be a person who feels comfortable confronting um a mentor or confronting the developer
+themselves and saying hey i found this flaw there's a problem here you don't necessarily want to be the
+whistleblower and you know you're running to anderson cooper to say hey look i found this flaw in this particular piece of software and it's
+horrible and he's like why are you talking to me um where do you start
+software engineering code of ethics was put together by the acm and ieee a joint task force into the association for computing
+machinery and the computer society of the ieee which are our two main
+professional bodies and the purpose of this code of ethics is to try to help give some guidance to
+software engineers in these dilemmas now
+let me let me read the the preamble here software engineers help commit themselves to making the analysis
+specification design development testing and maintenance of software a beneficial and respected profession in accordance
+with their commitment to the health safety and welfare of the public the software engineers should adhere to the eight principles
+which sounds like you're joining uh fraternity or sorority i suppose but um what this is trying to get at is
+um when you look at the code of ethics there are these eight large categories where the
+different um clauses fall and the idea is the higher the
+in this this chart one to eight one being the most important those are the clauses that you should
+give the most credence to when trying to give yourself some some help into finding out
+how you might handle something so the the eight categories eight principles are public fine and employer product
+judgment management profession colleague itself noticing that it starts with your
+responsibility to the public then your responsibility to your employer and your client
+and then the quality of the product and then your um personal biases
+with judgment and then how you treat others as a managerial in a managerial role how you treat the
+profession how you portray software engineers to the public at large how you help your colleagues and then
+self-improvement yourself lifelong um so
+uh we have those eight principles uh they are intended for basically anyone they they are written
+in plain language they're meant for managers stakeholders developers students
+um policymakers anyone to try and give some context as to what software
+engineers should be doing um when being responsible to society
+um this is a clutch quote from the from the code
+it is not intended that the individual parts of the code be used in isolation to justify errors of omission or
+commission the list of principles and clauses is not exhaustive pauses should not be read as separating
+the acceptable from the unacceptable in professional conduct in all practical situations the code is not a simple ethical
+algorithm that generates ethical decisions i love that statement we're going to come back to it in some situations
+standards may be in tension with each other or with standards from other sources these situations
+require the software engineer to use ethical judgment to act in a manner which is most consistent with the spirit of the code of ethics
+and professional practice given the circumstance the code is not a simple ethical algorithm that generates ethical
+decisions i guarantee what most computer scientists probably want what engineers
+want is i i am royally screwed what do i do and you want a choose your adventure
+book where you say i have problem oh it's problem seven
+problem seven if you wish to get fired turn to page 22. if you wish to do the right thing turn to page 72 oh good
+and it tells you what to do no no not at all in fact what you'll find
+is that um you can compare a lot of what you see in the code of
+ethics to other historical codes however you might want to think about that from from um uh
+from various like organizations or or or how do you think about where it's like here's some best practices it
+just so happens that uh point one point seven and point two point two kinda conflict a little bit and you
+might look at them go huh this says one thing this says another thing which one do i do
+um what it's gonna tell you is this is the one that matters for the public or this is the one that
+matters for your client and employer and you have to kind of start figuring things out so it's tricky
+it is tricky excuse me so let's go through the principles and
+go through some of the clauses and talk about what we see in these and how we're going to apply them so the
+public first and foremost your responsibility as a software engineer is to ensure the safety of the public
+if you know for a fact that there is something going on a piece of software that is going to endanger others your responsibility to do
+something about it raise a flag to inform to fix whatever it might be the public comes
+first then comes your responsibility to the client and your employer you are an employee of a company
+presumably as i mean you could be self-employed but you have a responsibility to create value for
+your company and you have a responsibility to meet the desires and needs of your stakeholder so as long as you're not
+endangering the public you really need to do what you're told
+so um in general you you know you should not be um
+putting your putting put know personal bias into how uh what as a
+customer says they need a product you should ensure that your whatever products you create are of the
+highest quality that you can basically don't don't go halfway you know want to meet
+professional standards you want to make good stuff your judgment uh maintain integrity and
+independence in their professional judgment if um your company gets a contract
+with some other nonprofit organization to build a piece of software and you're on that company's or that
+nonprofit's board of directors you probably shouldn't work on the software also if you
+if you leave a company voluntarily you probably are under some sort of nda non-disclosure agreement
+not reveal current products or anything like that to the new company for whatever period of time you need to obey
+those management software engineering managers and leaders shall subscribe to promote
+ethical approach to management um if you're in a managerial position you should treat your engineers with
+respect and not have 80-hour workweek you should you know have reasonable
+expectations during um during times like this for remote work
+understanding what people's needs are so that they're producing the best code that they can if um you'll find that when
+you have a team that feels comfortable with with each other and feels comfortable with the management position um and the policies around that
+that basically better things happen so be kind to each other
+basically uh profession software engineers sell advance the integrity and reputation of professional consistent with the public interest
+don't go mean posting all the time about horrible how horrible software engineers are
+on twitter and facebook and whatever like that i mean you know it at the end of the day
+you could argue does it really matter but if you profess to be a member of a profession and all you do is bad mouth that
+profession that doesn't really reflect well on you or the profession itself are there meme
+worthy stuff that happens in programming oh of course they're and of course you know we have fun with it and things like that but
+there's a line and you know as if you're employed by a company let's say you're employed by
+microsoft do you think microsoft is cool with you getting on twitter and just bashing ms products the entire time before you
+roll into work i mean i work for technically the commonwealth of virginia
+and i get reminders about things that you know what i should or should not post on social media because on some
+level i'm a representative of the commonwealth and the university of virginia and there
+cannot be any way that anything i post could be misconstrued as coming from some official channel so there are rules of propriety that you
+need to follow we all know by now through
+software process slides that when we work together as a team better things happen so if you have
+someone on your team that is struggling instead of you necessarily doing all their work for
+them or you know like oh i'll just do it myself that sort of thing we as a as a body of software engineers
+grow and improve when we aid our colleagues in their own learning
+um so when you're on a team and someone is struggling with something
+it's going to be better in the long run to help them help them learn and to help you know bring them up to
+the level that you need them to be as opposed to trying to either belittle them or remove their work or whatever like
+that they'll get a sense of accomplishment they will become more productive on the team
+you might be in line for that promotion now whatever it might be um again be
+kind to each other that that is important and be kind to yourself so participate
+in lifelong learning regarding the practice the profession and promote an ethical approach to practice the profession so
+we all know that software changes rapidly in our class we're learning python and django there's a very good chance that
+django will be legacy technology argue it's somewhat legacy on some level but
+i mean we move pretty fast in software development you need to
+commit to learning as you go and to learning how to learn
+you know you need to figure out how to go about okay this is the new this is the new hotness this is the new thing that we are using how am i going
+to go about picking this up to to stay relevant in the so those are the eight principles
+i'm going to dive into a few of the clauses for each of these and talk about how they apply um in the next few slides so
+these are just some examples so clause 1.02 in public moderate the interest of the software engineer the employer the
+client users with the public so just a broad statement of there's a balance and you need to think about it
+1.03 approve software only if they have a well-founded belief that it is safe needs specifications so again this this goes to a quality
+product and that you are only you're only putting good out in the world uh to quote jeff canada uh disclosed to
+appropriate persons or authorities any actual potential danger to the user public or environment so right after 1.03 we have the
+whistleblower clause of 1.04 um so it's there um
+pretty close to the top disclosed to appropriate persons or authorities any actual potential danger
+we have to take the public's safety seriously uh under client employer 2.01 provide
+service in the areas of competence being honest and forthright about limitations of experience and education
+don't bs people about what you know and don't know you are this sounds
+terrible you're an asset to the company right and i don't mean like you're like a chair or a desk but your experience
+your your ability is something that brings value be proud of what you bring
+to the table and don't try to you know bs your way into a corner because that's just going to be
+real bad for you and potentially bad for the product and potentially embarrassing for the employer be honest about what you know and you
+know go do self-improvement but don't just uh not knowingly use software that
+are detained or retained either eagerly or unethically
+i'ma give you a minute
+uh okay so let's just say of course that when
+you're in a professional position you have a job and you have money and and that's good and um you should buy all your software
+i know that as a as a poor star starving college student this is harder to think about particularly when staring at some of the
+packages of software they're extremely expensive that you think you need for whatever it is that you're trying to do
+but we are trying to build software that other people's built other people excuse me we're trying to
+build software that other people want to use and buy like
+let's be let's be kind to each other you know if someone built something that we need to use
+let's pay for it now i'm not gonna say that when i was in college i didn't
+happen to appropriate certain bits and bytes that do certain things
+with some reasonable frequency but i know better now and now i can teach you
+that you know there are deals out there and there are free and open uh source solutions so
+be good about that um be private any confidential information gain in your professional work
+so again if you're working with financial data it's possible you get access to some
+real financial data you need to keep that you need to keep that in confidence the product
+strive for a high quality acceptable cost a reasonable schedule do good software charge the right amount
+of money finish it on time that's kind of what that's getting at uh
+identify define and address ethical economic cultural legal and environmental issues related to work profit projects
+we are going to do um a whole video kind of along those lines in a little bit
+because uh in a future video uh when we talk about things like when
+you're writing machine learning algorithms um how are you taking bias into account
+race gender socioeconomic statics what are you doing so we will talk about
+identifying those ethical economic cultural legal issues uh ensure that they are qualified
+for any project for which they work so this goes back to the one from client employer make sure you're building stuff
+that you are qualified to build ensure appropriate method is used for any project if you are the project manager and you are
+doing your uh polar chart and it's screaming you need to do plan driven but
+at heart you're just a scrum person you just want to do agile you need to trust your professional
+instinct here and say okay well the chart says we should be doing plan driven because we're building space
+shuttle software but gosh darn it i wanted to do pure extreme programming maybe maybe follow the lessons that we
+have and you know use the proper method for things for judgment maintain professional
+objectivity with respect to any software related documents they're asked to evaluate if you are handed um
+a piece of code you're handed a design document and it's from a mortal
+enemy you still should treat it with respect and give an honest opinion it's like oh
+it's from that person and therefore it must be garbage i mean come on we're beyond that we're adults
+we can look at a piece of work and evaluate it appropriately don't engage in deceptive financial
+practices such as bribery glad we're taking a stand on bribery and
+double billing um you know you charge for a piece of software uh x amount for
+six months of work and then they say oh you say well i'm not done yet i need to charge more when you're
+effectively charging for the same piece of software that you already have been paid for so
+don't be horrible to people um disclose all concerned parties those conflicts of interest they could
+not be recently or escaped so back to my example about being on the board or a non-profit that
+hires a company or um i mean maybe you have to be on the team because you're you're a key person maybe you're you're
+maybe you are fulfilling the role of on-site customer you just need to be you just need to be
+up front and say you know this is this is a situation um
+you know this is a potential conflict i mean an example for me is i'm on the board of directors for um
+a uh for sammy school and my wife taught there for a little
+bit and so oh i reasonably recused myself from discussions about
+teacher pay it's not unreasonable this is something that we just we should do and we should recognize
+management um 5.02 ensure that software engineers are
+informed of standards before end or they're being held to them if you're going to make people build code a
+certain way maybe you should tell them what that certain way is before you start yelling at them i mean you know a
+lot of the things in management are being uh a good leader um
+ensure that um that that um your employees know the policies at the
+at the company so what are the hr policies what are the password policies what are the security policies
+uh for getting in and out of the building for what they're allowed to take home for what they must vpn for there's a reason that that these
+protections exist even though they might be inconvenient for the software engineer
+there are almost always legal reasons and safety reasons for protecting this data you
+might not agree with how it's being done you might think that oh there's so much other ways we could do it yada yada
+you don't know the entire process for why a particular methodology was chosen
+you very well could be right but it'd also be wrong so in some cases you
+just should suck it up and do it and management's role to make sure that folks are
+so don't come down on them because they say hey you really need to vpn into the system whenever you're dealing
+with sensitive data assigned work only after taking into account appropriate contributions of
+education experience again we're getting back to the people have certain expertise in certain parts of
+software development language platforms whatever make sure everyone knows what the playing field is and everyone
+is you know working on the things they should be working on that doesn't mean don't train in other ways but be honest about
+what you know you can do right the profession
+promote the public knowledge of software engineering holy smokes we could do an entire lesson
+just on this you have seen a meme or some
+characterization of software engineers as being someone shoved in their parents
+basement in the dark glow in the dark i know they exist ufo posters slamming
+seven mountain dews all at the same time with nine different types of dorito chips with the matrix background while they're
+hacking into the nsa while also writing some code in in white space to then uh upload to the
+banking you've seen it you you have and we fight against that all the time
+software engineering is not that software engineering is incredibly social software
+engineering is working with teams it's talking to the customer it's understanding needs it's building solutions it's
+you have to be someone who can go into a scenario where someone's going to approach you with potential domain and content
+knowledge that you have no experience with and you have to find a way to understand
+where they're coming from and then help them build a solution
+i mean that's very different and also
+you know we are we as a community we have challenges absolutely about
+underrepresented minorities in in computing but it's something we are working on and i think that
+something at uva we we work on we do pretty well in trying to
+be as inclusive as possible and and and and bring in a a good represented
+representation of society into into our profession because how else are we going to build
+good software if we're not seeing who we're building software for it's it's
+it's frustrating to to see the public perception of our profession
+um even though we need to try and push back on as much as gently but we do need to push back at it
+um should not promote your own interest it's like oh you're buying software from microsoft did you know i had side job which is really hot you know
+don't obey laws governing work um take responsibility for detecting
+correcting reporting errors in software if you find a bug we're all in one team report it avoid
+association with business or organizations which are in conflict with this code so
+the code has come out against bribery and now being associated with the mafia or
+some other organization however you know don't work for dr doom
+don't work for thanos so you yeah i'm glad we cleared that up colleagues
+assist colleagues in professional development back to what i said before teams work
+better when everyone works together and we can bring our colleagues
+uh up to the standards that we want them to be and we help them and we help them get the training that they need because
+it's just good it's good for everyone credit fully the work of others and refrain from taking undue credit
+look there's a ton of code out there there's a ton of code that's been released publicly there's a ton of code that's been released under different licenses
+we are all professional developers we know that we should and can find
+acceptable solutions to problems we shouldn't be redesigning solutions all the time that's not good for
+creating uh adding defects into the world because something that's more mature that's been
+tested more and more that's something you should look at and try and incorporate but credit the people who built it for
+heaven's sake you need to start getting in this in this habit now in 3240. now i'm not going to speak for
+any other class that you have about what code you're allowed to use or things like that but as a software
+engineer you don't rebuild solution unless you
+have to you want to find proven tested things and build those in such a way to create
+the software solution that you need and do this in a legal ethical and responsible way we'll talk about
+licensing later on and what you are allowed to use and not allowed to use but let's at least start with citing
+things review the work of others in objective candid and properly documented way make sure that if you are looking at
+someone's code you are giving good feedback the objective and finally for yourself
+further the knowledge of developments in the analysis specific keep learning about software engineering improve your ability to create safe
+reliable and usable and useful quality software at a reasonable cost again be a better software engineer
+um basically don't be stagnant recognize that the
+profession changes and that you need to change with it and that you need to recognize that
+um new ethical challenges appear that new um biases appear
+that new technologies appear and that um the possible solution set
+is going to shift and you need to be able to shift with it you shouldn't always say oh i was always able to solve this with xml
+i was always able to solve this with a facial recognition algorithm and all of a sudden you might say you might find out later on that you
+know xml that's great but you know there's better ways of doing it moving forward facial recognition that's
+great but the old algorithms well they were written by white guys
+and so sometimes they're not as good and so you can't just say well we're just going to use that algorithm no that you you need to recognize that this
+is a problem that was created and we need to address it um just for an equity standpoint
+and it recognizes personal violations of the code are inconsistent with being a professional software are there software engineering police
+that are going to show up at your door well not software engineering police depending on what you do maybe real police
+yes um but this is a like an internal ethical thing
+that you need to internalize this recognize that as a professional
+software engineer this is your job now what is it in the code where to get help
+there's not a hotline at the bottom of the code that says you know if you're in trouble dial what for that
+yeah you you do kind of have to read the code and use the principles the
+principles and the clauses in there to help guide your future action there's no information about who to report violations to
+um in a in an organization usually there's a chain that you can
+report software issues to a scrum master a project lead
+a manager whatever it might be and for things that are happening in the organization such as the manager is requiring you to work 80
+hours a week there tends to be an hr hotline or something along the where to get
+advice and support in a confrontation with an employer um
+it's tough i mean there are there are message boards out there where people post i mean
+of varying quality and degree but there are professional software developer message boards where
+things like this are discussed and so you know you could find some some space to get a little bit of of
+advice there um but also just talking to a trusted friend who's also a software gear maybe another
+company if that's possible to get just kind of a sounding board it's good to have that sort of support network you'll find that
+professional conferences are one way of building that support network um that's really important to do you
+know if if you're a developer and you stay isolated within your company you might not necessarily know
+what is going on at large so while some of these conferences even the virtual ones might seem kind of silly sometimes
+there is a lot of good reason to go um from a just a professional um
+what are the consequences of violating the code and you could be fired um you also could break laws um you also
+could like not sleep well at night hopefully um depending on the the severity or the
+type of thing that's heard um what do you do if if there's a conflict between client and
+employer there aren't good answers to all these
+there aren't and um trying to find the right path through
+some of these scenarios can be difficult so one of the things that we are going to do as part of the guided practice
+or this is to look at some case study and we're going to evaluate those case
+studies and ask you to apply the clauses and try and figure out what you would do in these scenarios are they cut and dry
+no of course not those would be boring we're going to give you some that you'll have to think about but
+take some time when you get a chance to think about this that as software engineers we have a
+responsibility um just as you might point to our friends in civil engineering who are
+building a bridge you say okay you need to build that bridge and make sure it doesn't collapse and then you know from a very surface
+level perspective you can think about the quality of the product there but from our our perspective you know
+we have to think about the same thing quality of the software we put out there and what are the ramifications of that
+software so i know it's kind of a heavy topic um we're going to keep talking about it
+and and dip into some more specific examples but take a look at the software engineering code of ethics if you have any questions
+bring them up let's talk about them because that's the way that we we grow so hope you're doing well take
+care i'll see you in the next video

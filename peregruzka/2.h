@@ -14,8 +14,14 @@ class Show
 
 private:
    string name;
-   struct time
+   class Time
    {
+   public:
+      friend std::ostream &operator<<(std::ostream &out, Time &time)
+      {
+         out << time.hour << ":" << time.minute;
+         return out;
+      }
       int hour;
       int minute;
    } time;
@@ -25,7 +31,7 @@ public:
    {
       time.hour = rand() % 24;
       time.minute = rand() % 60;
-      name = "Random Show " + to_string(rand() % 100);
+      name = "Random Show " + to_string(rand() % 100 + 1);
    }
 
    Show()
@@ -81,11 +87,18 @@ void setShowRandom(Show &_show)
 {
    _show.getShowRandom();
 }
+/*std::ostream &operator<<(std::ostream &out, Time &time)
+{
+   out << time.hour << ":" << time.minute;
+   return out;
+}
+*/
 
 std::ostream &operator<<(std::ostream &out, Show &show)
 {
-   out << "The name of the show " << show.name << "\n"
-       << "The time of the show is " << show.time.hour << ":" << show.time.minute << "\n";
+   out << "The name of the show is" << show.name << "\n"
+       //<< "The time of the show is " << show.time.hour << ":" << show.time.minute << "\n";
+       << "The time of the show is " << show.time << "\n";
    return out;
 }
 
@@ -105,7 +118,7 @@ std::istream &operator>>(std::istream &in, Show &show)
    in >> show.name;
    cout << "Enter hour ";
    in >> show.time.hour;
-   cout << "Enter minnute ";
+   cout << "Enter minute ";
    in >> show.time.minute;
    return in;
 }
