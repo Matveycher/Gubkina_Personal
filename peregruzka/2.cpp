@@ -28,6 +28,13 @@ int main()
          show.getShowRandom();
       }
       cout << show;
+      cout << "Do you want to increment the show? (y/n): ";
+      cin >> answer;
+      if (answer == 'y')
+      {
+         ++show;
+      }
+      cout << show;
    }
    else if (choice == 2)
    {
@@ -46,6 +53,13 @@ int main()
       else
       {
          showlist.getShowsRandom();
+      }
+      cout << showlist;
+      cout << "Do you want to sort the showlist? (y/n): ";
+      cin >> answer;
+      if (answer == 'y')
+      {
+         showlist.Sort();
       }
       cout << showlist;
       return 0;

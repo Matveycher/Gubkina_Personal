@@ -14,6 +14,8 @@ class Show
 
 private:
    string name;
+
+public:
    class Time
    {
    public:
@@ -32,6 +34,21 @@ public:
       time.hour = rand() % 24;
       time.minute = rand() % 60;
       name = "Random Show " + to_string(rand() % 100 + 1);
+   }
+
+   Show operator++()
+   {
+      time.minute++;
+      if (time.minute == 60)
+      {
+         time.minute = 0;
+         time.hour++;
+         if (time.hour == 24)
+         {
+            time.hour = 0;
+         }
+      }
+      return *this;
    }
 
    Show()
@@ -62,6 +79,30 @@ public:
    {
       capacity = amount;
       shows = new Show[capacity];
+   }
+   void Sort()
+   {
+      for (int i = 0; i < capacity; i++)
+      {
+         for (int j = 0; j < capacity - 1; j++)
+         {
+            if (shows[j].time.hour > shows[j + 1].time.hour)
+            {
+               Show temp = shows[j];
+               shows[j] = shows[j + 1];
+               shows[j + 1] = temp;
+            }
+            else if (shows[j].time.hour == shows[j + 1].time.hour)
+            {
+               if (shows[j].time.minute > shows[j + 1].time.minute)
+               {
+                  Show temp = shows[j];
+                  shows[j] = shows[j + 1];
+                  shows[j + 1] = temp;
+               }
+            }
+         }
+      }
    }
 
    ShowList()
@@ -96,7 +137,7 @@ void setShowRandom(Show &_show)
 
 std::ostream &operator<<(std::ostream &out, Show &show)
 {
-   out << "The name of the show is" << show.name << "\n"
+   out << "The name of the show is " << show.name << "\n"
        //<< "The time of the show is " << show.time.hour << ":" << show.time.minute << "\n";
        << "The time of the show is " << show.time << "\n";
    return out;
