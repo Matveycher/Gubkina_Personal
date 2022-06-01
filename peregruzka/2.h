@@ -4,26 +4,23 @@
 #include <exception>
 #include <cmath>
 #include <ctime>
-
 using namespace std;
-
 class Show
 {
    friend std::ostream &operator<<(std::ostream &out, Show &show);
    friend std::istream &operator>>(std::istream &in, Show &show);
+   friend bool operator>(Show &show1, Show &show2);
+   friend bool operator<(Show &show1, Show &show2);
+   friend bool operator==(Show &show1, Show &show2);
+   /*friend bool operator!= (Show &show1, Show &show2);
+   friend bool operator>= (Show &show1, Show &show2);
+   friend bool operator<= (Show &show1, Show &show2);
+*/
 
 private:
    string name;
-
-public:
-   class Time
+   struct time
    {
-   public:
-      friend std::ostream &operator<<(std::ostream &out, Time &time)
-      {
-         out << time.hour << ":" << time.minute;
-         return out;
-      }
       int hour;
       int minute;
    } time;
@@ -33,9 +30,16 @@ public:
    {
       time.hour = rand() % 24;
       time.minute = rand() % 60;
-      name = "Random Show " + to_string(rand() % 100 + 1);
+      name = "Random Show " + to_string(rand() % 100);
    }
-
+   int getHour()
+   {
+      return time.hour;
+   }
+   int getMinute()
+   {
+      return time.minute;
+   }
    Show operator++()
    {
       time.minute++;
@@ -59,9 +63,9 @@ public:
    }
    Show(string name, int hour, int minute)
    {
-      this->name = name;
-      this->time.hour = hour;
-      this->time.minute = minute;
+      name = name;
+      time.hour = hour;
+      time.minute = minute;
    }
 };
 
@@ -82,24 +86,15 @@ public:
    }
    void Sort()
    {
-      for (int i = 0; i < capacity; i++)
+      for (int i = 0; i < capacity - 1; i++)
       {
-         for (int j = 0; j < capacity - 1; j++)
+         for (int j = 0; j < capacity - i - 1; j++)
          {
-            if (shows[j].time.hour > shows[j + 1].time.hour)
+            if (shows[j] > shows[j + 1])
             {
                Show temp = shows[j];
                shows[j] = shows[j + 1];
                shows[j + 1] = temp;
-            }
-            else if (shows[j].time.hour == shows[j + 1].time.hour)
-            {
-               if (shows[j].time.minute > shows[j + 1].time.minute)
-               {
-                  Show temp = shows[j];
-                  shows[j] = shows[j + 1];
-                  shows[j + 1] = temp;
-               }
             }
          }
       }
@@ -128,18 +123,11 @@ void setShowRandom(Show &_show)
 {
    _show.getShowRandom();
 }
-/*std::ostream &operator<<(std::ostream &out, Time &time)
-{
-   out << time.hour << ":" << time.minute;
-   return out;
-}
-*/
 
 std::ostream &operator<<(std::ostream &out, Show &show)
 {
-   out << "The name of the show is " << show.name << "\n"
-       //<< "The time of the show is " << show.time.hour << ":" << show.time.minute << "\n";
-       << "The time of the show is " << show.time << "\n";
+   out << "The name of the show " << show.name << "\n"
+       << "The time of the show is " << show.time.hour << ":" << show.time.minute << "\n";
    return out;
 }
 
@@ -173,4 +161,62 @@ std::istream &operator>>(std::istream &in, ShowList &showlist)
       in >> showlist.shows[i];
    }
    return in;
+}
+
+bool operator>(Show &show1, Show &show2)
+{
+   if (show1.time.hour > show2.time.hour)
+   {
+      return true;
+   }
+   else if (show1.time.hour == show2.time.hour)
+   {
+      if (show1.time.minute > show2.time.minute)
+      {
+         return true;
+      }
+      else
+      {
+         return false;
+      }
+   }
+   else
+   {
+      return false;
+   }
+}
+
+bool operator<(Show &show1, Show &show2)
+{
+   if (show1.time.hour < show2.time.hour)
+   {
+      return true;
+   }
+   else if (show1.time.hour == show2.time.hour)
+   {
+      if (show1.time.minute < show2.time.minute)
+      {
+         return true;
+      }
+      else
+      {
+         return false;
+      }
+   }
+   else
+   {
+      return false;
+   }
+}
+
+bool operator==(Show &show1, Show &show2)
+{
+   if (show1.time.hour == show2.time.hour && show1.time.minute == show2.time.minute)
+   {
+      return true;
+   }
+   else
+   {
+      return false;
+   }
 }
